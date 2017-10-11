@@ -155,6 +155,15 @@ class SingleLineText(FormQuestion):
             label=self.get_label(),
             required=False,
         )
+    
+class TextArea(FormQuestion):
+
+    def make_field(self):
+        return forms.CharField(
+            widget=forms.Textarea,
+            label=self.get_label(),
+            required=False,
+        )
 
 
 class MultipleChoice(FormQuestion):
